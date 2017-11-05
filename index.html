@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Forcast</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- 제이쿼리 모바일 스타일시트 링크 -->
+    <link rel="stylesheet" href="library/jquerymobile/jquery.mobile-1.4.5.min.css" />
+
+    <!-- nativedroid2에 필요한 스타일시트 파일 -->
+    <link rel="stylesheet" href="library/font-awesome/font-awesome.min.css" />
+    <link rel="stylesheet" href="library/waves/waves.min.css" />
+    <link rel="stylesheet" href="library/wow/animate.css" />
+    <link rel="stylesheet" href="css/nativedroid2.css" />
+    <link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
+</head>
+
+<body>
+    <div data-role='page' id='weather_page' class="map_style nd2-no-menu-swipe" data-fullscreen="true">
+
+        <!-- 헤더 영역-->
+        <div data-role='header' class="wow fadeInDown" data-wow-delay="0.2s" data-position="fixed" data-tap-toggle="false">
+            <img src="img/weather_icons/01.png" height="50px" style="float: left; margin: 8px;" />
+            <h1>Sunshine</h1>
+        </div>
+
+
+        <!-- 콘텐츠 영역에 날씨 정보를 표시합니다. -->
+        <div data-role='content'>
+            <div id='today-forecast' style="color: white!important;"  class="nd2-card clr-bg-light-blue">
+            </div>
+
+            <hr>
+
+            <div id='yesterday-weather' style="color: white!important;" class="nd2-card card-media-right card-media-small clr-bg-cyan">
+            </div>
+
+            <div id='today-weather' style="color: white!important;" class="nd2-card card-media-right card-media-small clr-bg-light-blue">
+            </div>
+
+            <div id='tomorrow-weather' style="color: white!important;" class="nd2-card card-media-right card-media-small clr-bg-blue">
+            </div>
+
+            <div id='dayAfterTomorrow-weather' style="color: white!important;" class="nd2-card card-media-right card-media-small clr-bg-indigo">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 제이쿼리 모바일 자바스크립트 링크 -->
+    <!-- jquery.ui.min.js는 <nd2-include> 실행을 위해서 반드시 jquery.mobile.min.js 보다 먼저 배치해야 합니다. -->
+    <script src="library/jquery/jquery.min.js"></script>
+    <script src="library/jquery-ui/jquery-ui.min.js"></script>
+    <script src="library/jquerymobile/jquery.mobile-1.4.5.js"></script>
+
+    <!-- nativedroid2에 필요한 자바스크립트 파일 -->
+    <script src="library/waves/waves.min.js"></script>
+    <script src="library/wow/wow.min.js"></script>
+    <script src="js/nativedroid2.js"></script>
+    <script src="js/nd2settings.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/data_binding.js"></script>
+
+    <!--구글 맵을 사용하기 위한 jquery-->
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <script src="js/jquery.ui.map.full.min.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.map.extensions.js" type="text/javascript"></script>
+</body>
+
+</html>

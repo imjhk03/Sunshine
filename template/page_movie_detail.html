@@ -1,0 +1,29 @@
+<!--
+    #movie_detail_page : 영화 상세 정보 페이지
+-->    
+<div data-role='page' id='movie_detail_page' class="nd2-no-menu-swipe">
+
+    <!-- 좌측 판넬 메뉴를 HTML로 바인딩합니다. -->
+            <nd2-include data-src="panel.left.html"></nd2-include>
+    
+    <!-- 헤더 영역에 설정 메뉴에 해당되는 Wi-Fi, 디스플레이 밝기, 사운드 설정의 세가지 탭을 설정합니다. -->
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" class="wow fadeInDown" data-wow-delay="0.3s">
+        <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeInLeft" data-wow-delay='0.3s'><i class="zmdi zmdi-menu"></i></a>
+        <h1>영화 상세 정보</h1>
+        <a href="" id="btBack" class="ui-btn ui-btn-right wow fadeInright" ><i class="zmdi zmdi-arrow-back"></i></a>
+    </div>
+
+    <!-- 콘텐츠 영역에 영화 상세정보를 표시합니다. -->
+    <div data-role='content' class="wow bounceInRight">
+        <div id='movie-data'>
+
+        </div>
+    </div>
+
+   <!-- Footer 영역에 홈, 영화, 설정의 세가지 툴바를 배치합니다. -->
+    <!-- data-tap-toggle="false"를 해서 토글 기능을 제거합니다. -->
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+        <!-- 하단 툴바 메뉴를 HTML로 바인딩합니다. -->
+        <nd2-include data-src="toolbar_bottom.html"></nd2-include>               
+    </div>		
+</div>  

@@ -1,0 +1,115 @@
+<!--
+    + 이 예제는 제이쿼리모바일과 네이티브드로이드2를 사용하여 구글의 머티리얼 디자인을 구현합니다. 판넬, 탭,  툴바 메뉴의 스타터 템플릿 용도로 제작하였습니다. 
+    
+    + NativeDroid2 사용법은 아래 사이트를 참고하세요.
+    - http://nd2.godesign.ch/examples/elements/text.html 
+
+    + 제작 : HMAPS.net, 2016
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
+        
+        <!-- 제이쿼리 모바일 스타일시트 링크 -->
+        <link rel="stylesheet" href="library/jquerymobile/jquery.mobile-1.4.5.min.css" /> 
+
+        <!-- nativedroid2에 필요한 스타일시트 파일 -->
+        <link rel="stylesheet" href="library/font-awesome/font-awesome.min.css" />    
+        <link rel="stylesheet" href="library/waves/waves.min.css" />
+        <link rel="stylesheet" href="library/wow/animate.css" />
+        <link rel="stylesheet" href="css/nativedroid2.css" />
+        <link rel="stylesheet" href="css/nativedroid2.color.blue-grey.css" />
+        
+        <!-- 제이쿼리 모바일 자바스크립트 링크 -->
+        <!-- jquery.ui.min.js는 <nd2-include> 실행을 위해서 반드시 jquery.mobile.min.js 보다 먼저 배치해야 합니다. -->
+        <script src="library/jquery/jquery.min.js"></script>
+        <script src="library/jquery-ui/jquery-ui.min.js"></script>
+        <script src="library/jquerymobile/jquery.mobile-1.4.5.js"></script>
+
+        <!-- nativedroid2에 필요한 자바스크립트 파일 -->
+        <script src="library/waves/waves.min.js"></script>
+        <script src="library/wow/wow.min.js"></script>
+        <script src="js/nativedroid2.js"></script>
+        <script src="js/nd2settings.js"></script> 
+        
+        <script src="js/app.js"></script>
+    </head>
+    
+    <body class="clr-accent-lime">
+        
+        <div data-role='page' id='settings_page'>
+            
+            <!-- 좌측 판넬 메뉴를 HTML로 바인딩합니다. -->
+            <nd2-include data-src="panel.left.html"></nd2-include>
+
+            <!-- 헤더 영역에 설정 메뉴에 해당되는 Wi-Fi, 디스플레이 밝기, 사운드 설정의 세가지 탭을 설정합니다. -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" class="wow fadeInDown">
+                <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeInLeft" data-wow-delay='0.3s'><i class="zmdi zmdi-menu"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>설정</h1>
+
+                <ul id="tab_list" class="row" data-role="nd2tabs" data-swipe="true">
+                    <li id="tab_list1" data-tab-active="true" data-tab="friends" class='col-xs-auto' >
+
+                        <a href="#"  class="ui-btn ui-mini nd2-btn-icon-block"><i class='zmdi zmdi-network-wifi-alt'></i> Wi-Fi</a>
+
+                    </li>
+                    <li id="tab_list2" data-tab="work" class='col-xs-auto'>
+
+                        <a href="#" class="ui-btn ui-mini nd2-btn-icon-block"><i class='zmdi zmdi-brightness-medium'></i> 디스플레이</a>
+
+                    </li>
+                    <li id="tab_list3" data-tab="holiday" class='col-xs-auto'>
+
+                        <a href="#" class="ui-btn ui-mini nd2-btn-icon-block"><i class='zmdi zmdi-surround-sound'></i> 사운드</a>
+
+                    </li>
+                </ul>                           
+            </div>
+
+            <!-- 콘텐츠 영역에 설정에 해당되는 페이지를 연결합니다. -->
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+
+                    <div data-role="nd2tab"
+                                data-tab="friends" >
+                        <h1>Wi-Fi 설정</h1>
+                        <h2>안녕하세요</h2>
+                        <p>Wi-Fi 설정 페이지입니다.</p>
+                        <hr/>
+                        <h2 class="nd2-display-4">안녕하세요</h2>
+                        <p class="nd2-headline">Wi-Fi 설정 페이지입니다.</p>
+                    </div>
+
+                    <div data-role="nd2tab"
+                                data-tab="work" data-tab="friends" >
+                        <h1>디스플레이 밝기 설정</h1>
+                        <h2>안녕하세요</h2>
+                        <p>디스플레이 밝기 페이지입니다.</p>
+                        <hr/>
+                        <h2 class="nd2-display-4">안녕하세요</h2>
+                        <p class="nd2-headline">디스플레이 밝기 페이지입니다.</p>
+                    </div>
+
+                    <div data-role="nd2tab"
+                                data-tab="holiday" data-tab="friends" >
+                        <h1>사운드 설정</h1>
+                        <h2>안녕하세요</h2>
+                        <p>사운드 설정 페이지입니다.</p>
+                        <hr/>
+                        <h2 class="nd2-display-4">안녕하세요</h2>
+                        <p class="nd2-headline">사운드 설정 페이지입니다.</p>                        
+                    </div>
+            </div>
+
+            <!-- Footer 영역에 홈, 영화, 설정의 세가지 툴바를 배치합니다. -->
+            <!-- data-tap-toggle="false"를 해서 토글 기능을 제거합니다. -->
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <!-- 하단 툴바 메뉴를 HTML로 바인딩합니다. -->
+                <nd2-include data-src="toolbar_bottom.html"></nd2-include>                 
+            </div>	
+        </div>  
+
+    </body>
+</html>
