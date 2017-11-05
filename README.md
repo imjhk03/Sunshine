@@ -18,4 +18,6 @@
 - Google Maps를 이용하여 현재 위치를 찾는 getLocation 함수를 구현했습니다.
 - getSkyImage 함수를 이용하여 날씨 코드에 따른 날씨 아이콘을 지정하는 함수를 구현했습니다.
 
-* html 파일들만 있으며, phonegap을 이용하여 안드로이드앱 또는 아이폰 앱으로 변환해야 합니다.
+주의 사항 : html 파일들만 있으며, phonegap을 이용하여 안드로이드앱 또는 아이폰 앱으로 변환해야 합니다.
+
+![ScreenShot](https://user-images.githubusercontent.com/28954046/32413972-c2e55bdc-c25f-11e7-97b7-62ad74993053.png)
